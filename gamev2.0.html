@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="css/StoneAndIron.css">
 	</head>
 
-	<body style="background-color:#E9E9E9;">
+	<body style="background-color:#E9E9E9; height: 100%">
 		
 		<script type="text/javascript" src="cutscenes.js"></script>
 		<script type="text/javascript" src="listeners.js"></script>
@@ -14,20 +14,17 @@
 		
 		<div id="body" style=" padding: 0px;">
 		
-			<h1 id="header" width="100%" style="margin: 0px; padding: 0px;">You Are Now Speaking with Jeff</h1>
-
-			
+			<h1 id="header" width="100%" style="margin: 0px; padding: 0px"></h1>
 
 			<div id="log">
-				
-			</div>
+            </div>
 
 			<!--onclick="window.open('../html-link.htm','name','width=600,height=400')-->
 			
 			<input type="text" id="txt" placeholder="Type Here" maxlength="100" style="position: fixed; bottom: 0; left: 0; width: 85%; height: 50px; font-size: 30px; background-color: #CBCBCB; color: #000; padding-left: 15px; font-weight: 550; ">
-			<input type="button" value="Send" maxlength="100" style="position: fixed; bottom: 0; left: 86%; width: 14%; height: 56px; font-size: 30px; background-color: #CBCBCB; color: #000; padding-left: 15px; font-weight: 550; ">
+			<input type="button" id="send-button" value="Send" maxlength="100" style="position: fixed; bottom: 0; left: 86%; width: 14%; height: 56px; font-size: 30px; background-color: #CBCBCB; color: #000; padding-left: 15px; font-weight: 550; ">
 
-			<div style="margin: 45px;">
+			<div style="margin: 25px;">
 				<p id="bottomSpace" style="color: #fff;">. </p>
 			</div>
 		</div>

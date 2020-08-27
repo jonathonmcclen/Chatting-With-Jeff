@@ -48,6 +48,9 @@ window.onload = function(){
 	document.addEventListener('keyup', keyReleased);
 	
 	//var framerPerSecond = 0.50
+    
+    connectingAnimation();
+    addMessageSpace();
 
 };
 
@@ -66,18 +69,42 @@ function grabSub() {
 function addNewLogItem(user, txt, blue=false) {
 	if(user == "player"){
 		
-		var btn = document.createElement("h2");
-        btn.className = "log-item";
-		btn.innerHTML = txt;
-		document.getElementById("log").appendChild(btn);	
+		var msg = document.createElement('div');
+        msg.className = "player-message";
+        msg.innerHTML = `
+                    <div class="player-message-content">
+                        <div class="player-message-bubble-container">
+                            <div class="player-message-bubble">
+                                <p class="message-text">` + txt + `</p>
+                            </div>
+                        </div>
+                        <div class="player-message-img-container">
+                            <div class="player-message-img">
+                                <img class="profile-img" src="https://esc-room-games.s3.us-west-1.amazonaws.com/IWMMB/chatroom/UserPlaceholder.jpg">
+                            </div>
+                        </div>
+                    </div>
+                `
+		document.getElementById("log").appendChild(msg);
 		window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
 		
 	} else if(user == "comp") {
 		
-		var btn = document.createElement("h2");
-        btn.className = "log-item";
-		btn.innerHTML = txt;
-		document.getElementById("log").appendChild(btn);	
+		var msg = document.createElement('div');
+        msg.className = "computer-message";
+        msg.innerHTML = `
+                    <div class="computer-message-img-container">
+                        <div class="computer-message-img">
+                            <img class="profile-img" src="https://esc-room-games.s3.us-west-1.amazonaws.com/IWMMB/chatroom/JeffsProfilePicture.jpg">
+                        </div>
+                    </div>
+                    <div class="computer-message-bubble-container">
+                        <div class="computer-message-bubble">
+                            <p class="message-text">` + txt + `</p>
+                        </div>
+                    </div>
+                `
+		document.getElementById("log").appendChild(msg);
 		window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
 		
 	} else if(user == "") {

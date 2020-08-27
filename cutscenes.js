@@ -2183,3 +2183,24 @@ function playFailSound(ms_between, num_plays) {
         }, ms_between * i);
     }
 }
+
+
+
+//BEGIN CHATTING WITH JEFF ADDITIONS
+
+function connectingAnimation() {
+    document.getElementById('header').innerHTML = "Connecting..."
+
+    setTimeout(function() {
+        document.getElementById('header').innerHTML = "Connected!"
+    }, 2000);
+    setTimeout(function() {
+        document.getElementById('header').innerHTML = "You Are Now Speaking with Jeff"
+    }, 3000);
+}
+
+function addMessageSpace() {
+    var space = document.createElement('div');
+    space.style.height = window.innerHeight - 250 + "px";
+    document.getElementById("log").append(space);
+}
