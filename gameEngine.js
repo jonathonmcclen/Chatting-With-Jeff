@@ -50,7 +50,7 @@ window.onload = function(){
 	//var framerPerSecond = 0.50
     
     connectingAnimation();
-    addMessageSpace();
+   // addMessageSpace();
 
 };
 
