@@ -80,7 +80,7 @@ function addNewLogItem(user, txt, blue=false) {
                         </div>
                         <div class="player-message-img-container">
                             <div class="player-message-img">
-                                <img class="profile-img" src="https://esc-room-games.s3.us-west-1.amazonaws.com/IWMMB/chatroom/UserPlaceholder.jpg">
+                                <img class="profile-img" src="img/user-profile-picture.png">
                             </div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@ function addNewLogItem(user, txt, blue=false) {
         msg.innerHTML = `
                     <div class="computer-message-img-container">
                         <div class="computer-message-img">
-                            <img class="profile-img" src="https://esc-room-games.s3.us-west-1.amazonaws.com/IWMMB/chatroom/JeffsProfilePicture.jpg">
+                            <img class="profile-img" src="img/jeff-profile-picture.png">
                         </div>
                     </div>
                     <div class="computer-message-bubble-container">
