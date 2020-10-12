@@ -16,7 +16,7 @@ var alabaster_music = document.createElement('audio');
 alabaster_music.src = alabaster_music_src;
 alabaster_music.loop = true;
 
-var music_on = true;
+var music_on = false;
 var current_music = main_music;
 
 var inputAllowed = true;
@@ -50,6 +50,7 @@ window.onload = function(){
 	//var framerPerSecond = 0.50
     
     connectingAnimation();
+	setTimeout(respo1, 2000);
    // addMessageSpace();
 
 };
