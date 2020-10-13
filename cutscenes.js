@@ -37,6 +37,62 @@ function respo3 () {
 	
 	function line1(){
 		addNewLogItem("comp", "Language not recognized. Would you like to continue in Russian? Enter да or No.");
+	};
+	
+	function line2(){
+		addNewLogItem("comp", " I’m sorry there seems to be a problem with our language recognition. Would you mind entering ‘No’ please? I can’t address this from my end.");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+	setTimeout(line2, 4000);
+}
+
+function respo4 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("comp", "Language not recognized. ");
+		Ready_For_Input();
+	};
+	
+	function line2(){
+		addNewLogItem("comp", " Пожалуйста, введите желаемый язык");
+		Ready_For_Input();
+	};
+	
+	function line3(){
+		addNewLogItem("comp", " UH OH... Shes angry");
+		Ready_For_Input();
+	};
+	
+	function line4(){
+		addNewLogItem("comp", "I apologize for the inconvenience. Can you please enter the Russian word for english? That seems to be the only way the system will respond...");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+	setTimeout(line2, 4000);
+	setTimeout(line3, 6000);
+	setTimeout(line4, 8000);
+}
+
+function respo5 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("comp", "Language not recognized. Would you like to continue in Russian? Enter да or No.");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+}
+
+function respo6 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("comp", "Language not recognized. Would you like to continue in Russian? Enter да or No.");
 		Ready_For_Input();
 	};
 	

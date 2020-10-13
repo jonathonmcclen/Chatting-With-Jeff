@@ -46,6 +46,21 @@ function checkPlayerInput() {
 	} else if(section == 1 && puzzle == 2) {
 		respo3();
 		puzzle = 3
+	} else if(section == 1 && puzzle == 3) {
+		respo4();
+		puzzle = 4
+	}  else if(section == 1 && puzzle == 4) {
+		respo5();
+		puzzle = 5
+	} else if(section == 1 && puzzle == 5) {
+		respo6();
+		puzzle = 6
+	} else if(section == 1 && puzzle == 6) {
+		respo7();
+		puzzle = 7
+	} else if(section == 1 && puzzle == 7) {
+		respo8();
+		puzzle = 8
 	}
 	
 
