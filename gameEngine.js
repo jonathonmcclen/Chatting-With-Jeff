@@ -23,11 +23,11 @@ var inputAllowed = true;
 
 
 //Users
-var playerTag = "";
-var computerTag = "";
 var playerUsername = "";
+var firstName= "";
+var lastName = "";
+var firstPet
 var playerPassword = "";
-var Hacked = false;
 var Time = 0;
 
 

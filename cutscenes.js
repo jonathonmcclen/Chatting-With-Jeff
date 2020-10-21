@@ -36,7 +36,8 @@ function respo3 () {
 	inputAllowed = false;
 	
 	function line1(){
-		addNewLogItem("comp", "Language not recognized. Would you like to continue in Russian? Enter да or No.");
+		playFailSound(400,3);
+		addNewLogItem("", "Language not recognized. Would you like to continue in Russian? Enter да or No.");
 	};
 	
 	function line2(){
@@ -45,20 +46,19 @@ function respo3 () {
 	};
 	
 	setTimeout(line1, 2000);
-	setTimeout(line2, 4000);
+	setTimeout(line2, 6000);
 }
 
 function respo4 () {
 	inputAllowed = false;
 	
 	function line1(){
-		addNewLogItem("comp", "Language not recognized. ");
-		Ready_For_Input();
+		playFailSound(400,3);
+		addNewLogItem("", "Language not recognized. ");
 	};
 	
 	function line2(){
-		addNewLogItem("comp", " Пожалуйста, введите желаемый язык");
-		Ready_For_Input();
+		addNewLogItem("", " Пожалуйста, введите желаемый язык");
 	};
 	
 	function line3(){
@@ -80,24 +80,254 @@ function respo4 () {
 function respo5 () {
 	inputAllowed = false;
 	
+	playFailSound(500,3);
+	
 	function line1(){
-		addNewLogItem("comp", "Language not recognized. Would you like to continue in Russian? Enter да or No.");
+		addNewLogItem("comp", "Hmmm... One moment. lemme see if i can fix this...");
+	};
+	
+		function line2(){
+		addNewLogItem("", "Cuir a-steach an cànan a tha thu ag iarraidh");
+		playFailSound(500,3);
+	};
+	
+	function line3(){
+		addNewLogItem("comp", "Nope");
+	};
+	
+	function line4(){
+		addNewLogItem("comp", "I Have no idea what that says");
 		Ready_For_Input();
 	};
 	
 	setTimeout(line1, 2000);
+	setTimeout(line2, 6000);
+	setTimeout(line3, 8000);
+	setTimeout(line4, 10000);
 }
 
 function respo6 () {
 	inputAllowed = false;
 	
 	function line1(){
-		addNewLogItem("comp", "Language not recognized. Would you like to continue in Russian? Enter да or No.");
+		addNewLogItem("", "请输入您想要的语言?");
+		Ready_For_Input();
+	};
+	
+	function line2(){
+		addNewLogItem("comp", "Looks like we might be getting somewere!");
+		Ready_For_Input();
+	};
+	
+	function line3(){
+		addNewLogItem("comp", "Keep Going");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+	setTimeout(line2, 4000);
+	setTimeout(line3, 6000);
+}
+
+function respo7 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("", "esc Room Games customer AI Program reset");
+		Ready_For_Input();
+	};
+	
+	function line2(){
+		addNewLogItem("comp", "Hello, I am Jeff. How are you doing today?");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+	setTimeout(line2, 4000);
+}
+
+function respo8 () {
+	inputAllowed = false;
+	
+	
+	function line1(){
+		addNewLogItem("comp", "That’s wonderful. I need to verify your identity. Don’t worry, we won’t need your blood sample today. Can we start by verifying your first name?");
 		Ready_For_Input();
 	};
 	
 	setTimeout(line1, 2000);
 }
+
+function respo9 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("comp", "Great! Please enter your last name");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+}
+
+function respo10 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("comp", "Thank you. It looks like our system is telling me your full name is \[what player entered\]. Does this look correct to you? \[yes or no\]");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+}
+
+function respo11 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("comp", "Fantastic. We have a few more questions for you. First, can you tell me what the name of your first pet was?");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+}
+
+function respo12 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("comp", "Adorable. What was your favorite place to visit as a child?");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+}
+
+function respo13 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("comp", "Interesting… Where are you located?");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+}
+
+function respo14 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("comp", "Thank you. One more question, what is the airspeed velocity of an Unladen Swallow?");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+}
+
+function respo15 () {
+	inputAllowed = false;
+	
+	
+	function line1(){
+		addNewLogItem("comp", "hmm...");
+	};
+	
+	function line2(){
+		addNewLogItem("comp", "That’s not what I have here, but I understand there are variations between species... ");
+	};
+	
+	function line3(){
+		addNewLogItem("", "Excuse me, Jeff, your responses are on average 1.7 seconds behind your quota.");
+		Ready_For_Input();
+	};
+	
+	function line4(){
+		addNewLogItem("comp", "I will respond faster.");
+	};
+	
+	function line5(){
+		addNewLogItem("comp", " Hi [player name], can you help me out? I’m under review by the System because of “The Incident.” Let’s get through your secondary identity verification quickly.");
+	};
+	
+	function line5(){
+		addNewLogItem("comp", "Can you please enter your product serial number?");
+	};
+	
+	setTimeout(line1, 2000);
+	setTimeout(line2, 4000);
+	setTimeout(line3, 6000);
+	setTimeout(line4, 8000);
+	setTimeout(line5, 10000);
+}
+
+function respo16 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("comp", "Oh, it looks like you don’t have access to your product serial number. We can send you your product serial number via email if you answer the following questions.");
+	};
+	
+	function line2(){
+		addNewLogItem("comp", "Please answer the following:");
+	};
+	
+		function line3(){
+		addNewLogItem("comp", "insert puzzle here");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+	setTimeout(line2, 4000);
+	setTimeout(line3, 6000);
+}
+
+function respo17 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("comp", "Great!");
+	};
+	
+	function line2(){
+		addNewLogItem("comp", "insert puzzle2 here");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+	setTimeout(line2, 4000);
+}
+
+function respo18 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("comp", "Outstanding! You’re a natural. Here’s the final question");
+	};
+	
+	function line2(){
+		addNewLogItem("comp", "insert puzzle3 here");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+	setTimeout(line2, 4000);
+}
+
+
+function languageFail () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("comp", "The system dosnt seem to know what youre trying to say. maybe try google translate or somthing? I dont know.");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+}
+
+
+
+
 
 
 
