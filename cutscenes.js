@@ -577,6 +577,7 @@ function fadein(ID, Direction){
 
 
 //Typing animation
+
 function startTypingAnimation() {
 	
     var typing_log_item = document.createElement("h2");

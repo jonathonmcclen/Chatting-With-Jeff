@@ -6,7 +6,8 @@ html{
 }
 
 #header {
-	background-color: steelblue;
+	background: rgb(70,130,180);
+    background: linear-gradient(90deg, rgba(70,130,180,1) 35%, rgba(21,64,99,1) 100%);
 	margin: 0px;
     width: 99%;
     position: absolute;
@@ -19,10 +20,16 @@ html{
     padding-left: 5px;
 }
 
+#txt {
+    background: rgb(233,233,233);
+    background: linear-gradient(90deg, rgba(233,233,233,1) 35%, rgba(203,203,203,1) 100%);
+}
+
 h2 {
 	color:#000; 
 	font-family: consolas, Charcoal, sans-serif; 
 	white-space: nowrap;
+    margin-bottom: 30px;
 }
 
 h1 {
@@ -72,39 +79,29 @@ a.hovered-URL {
 
 .computer-message {
     position: relative;
-    margin-top: 40px;
+    margin-bottom: 40px;
     width: 100%;
-    min-height: 90px;
-}
-
-.computer-message-img-container {
-    display: table-cell;
-    width: 120px;
-    height: 100%;
-    position: relative;
+    min-height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .computer-message-img {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%);
     width: 100px;
     height: 100px;
-}
-
-.computer-message-bubble-container {
-    display: table-cell;
+    margin-right: 20px;
 }
 
 .computer-message-bubble {
+    position: relative;
     background-color: lightgreen;
-    max-width: 90%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 20px;
+    
+    padding: 30px;
+    
+    border-radius: 10px;
+    
+    max-width: 60%;
 }
 
 .message-text {
@@ -123,43 +120,69 @@ a.hovered-URL {
 
 .player-message {
     position: relative;
-    margin-top: 40px;
-    margin-bottom: 0;
+    margin-bottom: 40px;
     width: 100%;
-    min-height: 90px;
-}
-
-.player-message-content {
-    float: right;
-}
-
-.player-message-img-container {
-    display: table-cell;
-    width: 120px;
-    height: 100%;
-    position: relative;
+    min-height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .player-message-img {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(0, -50%);
     width: 100px;
     height: 100px;
-}
-
-.player-message-bubble-container {
-    display: table-cell;
+    margin-left: 20px;
 }
 
 .player-message-bubble {
+    position: relative;
     background-color: lightblue;
-    max-width: 80%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 20px;
-    float: right;
+    
+    padding: 40px;
+    
+    border-radius: 10px;
+    
+    max-width: 60%;
 }
+
+
+
+
+#log {
+    position: relative;
+    top: 60px;
+}
+
+
+
+
+.right-message-tail:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-left-color: lightblue;
+	border-right: 0;
+	margin-top: -10px;
+	margin-right: -10px;
+}
+
+
+.left-message-tail:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-right-color: lightgreen;
+	border-left: 0;
+	margin-top: -10px;
+	margin-left: -10px;
+}
+
+
