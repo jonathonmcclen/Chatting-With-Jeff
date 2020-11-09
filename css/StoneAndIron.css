@@ -7,22 +7,26 @@ html{
 
 #header {
 	background: rgb(70,130,180);
-    background: linear-gradient(90deg, rgba(70,130,180,1) 35%, rgba(21,64,99,1) 100%);
+    background: linear-gradient(180deg,rgba(21,64,99,1) -10%, rgba(70,130,180,1) 50%, rgba(21,64,99,1) 150%);
 	margin: 0px;
-    width: 99%;
+    width: 100%;
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 0px;
+    left: 0px;
     display: block;
-    box-shadow: 5px 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    box-shadow: 0px 5px rgba(133, 199, 255,.5);
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 5px;
 }
 
 #txt {
     background: rgb(233,233,233);
-    background: linear-gradient(90deg, rgba(233,233,233,1) 35%, rgba(203,203,203,1) 100%);
+    background: linear-gradient(0deg, rgba(233,233,233,1) 35%, rgba(203,203,203,1) 100%);
+}
+
+input:focus {
+  border: none;
 }
 
 h2 {
@@ -33,7 +37,7 @@ h2 {
 }
 
 h1 {
-	color:#000; 
+	color:#fff; 
 	font-family: consolas, Charcoal, sans-serif; 
 	white-space: nowrap;
 	font-family: monospace;
@@ -138,7 +142,7 @@ a.hovered-URL {
     position: relative;
     background-color: lightblue;
     
-    padding: 40px;
+    padding: 30px;
     
     border-radius: 10px;
     
@@ -151,6 +155,7 @@ a.hovered-URL {
 #log {
     position: relative;
     top: 60px;
+	margin-top: 40px;
 }
 
 
