@@ -7,7 +7,46 @@ failure_sound.src = 'https://cia-9d562a98.s3.us-west-1.amazonaws.com/GameAssets/
 
 var typing_animation
 
+
 //-------------------------------------------------
+//new cutscene format v1 (not working)
+	
+
+var s1p1 = [
+	['comp', 'This is a test computer message'],
+	['1', 'This is a second computer message'],
+	['1', 'this is a test message froma differnet user']
+];
+
+function cutscene(scene, speed){
+	
+	var length = scene.length
+	console.log(length);
+	
+	for ( i = 0; i < length; i++) {
+		console.log('ran');
+		console.log(s1p1[i][0]);
+		console.log( s1p1[i][1]);
+		
+		function line(){
+			addNewLogItem(s1p1[i][0], s1p1[i][1]);
+		};
+		
+		line()
+		//setTimeout(line, speed*i);
+		
+	}
+}
+
+//-------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 function respo1 () {
@@ -324,6 +363,110 @@ function languageFail () {
 	
 	setTimeout(line1, 2000);
 }
+
+
+function respo19 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("comp", "You could practically do my job for me! Would you mind watching this advertisement for the game and giving us feedback on it? There will be a survey following the AD. [link]");
+	};
+	
+	function line2(){
+		addNewLogItem("comp", "How many times does the phrase Escape Room Games occur in the ad?");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+	setTimeout(line2, 4000);
+}
+
+function respo20 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("comp", "5 times? hmm");
+	};
+	
+	function line2(){
+		addNewLogItem("comp", "The System won't be happy with that. Better double it.");
+	};
+	
+	function line3(){
+		addNewLogItem("comp", "Question #2: Among the text on screen during the ad, what word is misspelled (use the correct spelling)?");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+	setTimeout(line2, 4000);
+	setTimeout(line3, 5000);
+}
+
+function respo20 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("comp", "5 times? hmm");
+	};
+	
+	function line2(){
+		addNewLogItem("comp", "The System won't be happy with that. Better double it.");
+	};
+	
+	function line3(){
+		addNewLogItem("comp", "Question #2: Among the text on screen during the ad, what word is misspelled (use the correct spelling)?");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+	setTimeout(line2, 4000);
+	setTimeout(line3, 5000);
+}
+
+function respo20 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("", "[player name in full] has quicker reactions than you do, Jeff. If you want to keep your job, please increase productivity immediately.");
+	};
+	
+	function line2(){
+		addNewLogItem("comp", "I’m sorry, System. I’ll go faster!");
+	};
+	
+	function line3(){
+		addNewLogItem("comp", " Quickly! I can’t get fired. The last Customer Service Representative to get fired  was never seen again!");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+	setTimeout(line2, 4000);
+	setTimeout(line3, 5000);
+}
+
+function respo30 () {
+	inputAllowed = false;
+	
+	function line1(){
+		addNewLogItem("", "[player name in full] has quicker reactions than you do, Jeff. If you want to keep your job, please increase productivity immediately.");
+	};
+	
+	function line2(){
+		addNewLogItem("comp", "I’m sorry, System. I’ll go faster!");
+	};
+	
+	function line3(){
+		addNewLogItem("comp", " Quickly! I can’t get fired. The last Customer Service Representative to get fired  was never seen again!");
+		Ready_For_Input();
+	};
+	
+	setTimeout(line1, 2000);
+	setTimeout(line2, 4000);
+	setTimeout(line3, 5000);
+}
+
+
+
 
 
 

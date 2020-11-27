@@ -55,7 +55,8 @@ window.onload = function(){
 	//var framerPerSecond = 0.50
     
     connectingAnimation();
-	setTimeout(respo1, 2000);
+	cutscene(s1p1, 2000);
+	//setTimeout(respo1, 2000);
    // addMessageSpace();
 
 };

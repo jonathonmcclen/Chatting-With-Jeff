@@ -30,10 +30,10 @@ input:focus {
 }
 
 h2 {
-	color:#000; 
+	color: #929292; 
 	font-family: consolas, Charcoal, sans-serif; 
-	white-space: nowrap;
     margin-bottom: 30px;
+	text-shadow: 0px 1px 0px rgba(255,255,255,1);
 }
 
 h1 {
