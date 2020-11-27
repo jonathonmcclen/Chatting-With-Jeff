@@ -14,7 +14,7 @@ var typing_animation
 
 var s1p1 = [
 	['comp', 'This is a test computer message'],
-	['1', 'This is a second computer message'],
+	['comp', 'This is a second computer message'],
 	['1', 'this is a test message froma differnet user']
 ];
 
