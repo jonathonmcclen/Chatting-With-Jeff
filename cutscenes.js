@@ -23,17 +23,16 @@ function cutscene(scene, speed){
 	var length = scene.length
 	console.log(length);
 	
-	for ( i = 0; i < length; i++) {
+	for (let i = 0; i < length; i++) {
 		console.log('ran');
-		console.log(s1p1[i][0]);
-		console.log( s1p1[i][1]);
+		console.log(scene[i][0]);
+		console.log(scene[i][1]);
 		
 		function line(){
-			addNewLogItem(s1p1[i][0], s1p1[i][1]);
+			addNewLogItem(scene[i][0], scene[i][1]);
 		};
 		
-		line()
-		//setTimeout(line, speed*i);
+		setTimeout(line, speed*i);
 		
 	}
 }
