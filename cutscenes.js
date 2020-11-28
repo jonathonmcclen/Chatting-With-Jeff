@@ -13,13 +13,41 @@ var typing_animation
 	
 
 var s1p1 = [
-	['comp', 'This is a test computer message'],
-	['comp', 'This is a second computer message'],
-	['1', 'this is a test message froma differnet user']
+	["jeff", "Hello, I am Jeff. Who do I have the pleaseure of speaking with today?"]
+];
+
+var s1p2 = [
+	["jeff", "It's nice to meet you, Joe. What can I help you with today?"]
+];
+
+var s1p3 = [
+	["system", "Language not recognized. Would you like to continue in Russian? Enter да or No."],
+	["jeff", " I’m sorry there seems to be a problem with our language recognition. Would you mind entering ‘No’ please? I can’t address this from my end."]
+];
+
+var s1p4 = [
+	["system", "Language not recognized. "],
+	["system", " Пожалуйста, введите желаемый язык"],
+	["jeff", " UH OH... Shes angry"],
+	["jeff", "I apologize for the inconvenience. Can you please enter the Russian word for english? That seems to be the only way the system will respond..."]
+];
+
+var s1p5 = [
+	["comp", "Hmmm... That did somthing... One moment. lemme see if i can fix this..."],
+	["system", "Cuir a-steach an cànan a tha thu ag iarraidh"],
+	["jeff", "Guess not..."],
+	["jeff", "I Have no idea what that says"]
+];
+
+var s1p6 = [
+	["comp", "Hmmm... That did somthing... One moment. lemme see if i can fix this..."],
+	["system", "Cuir a-steach an cànan a tha thu ag iarraidh"],
+	["jeff", "Guess not..."],
+	["jeff", "I Have no idea what that says"]
 ];
 
 function cutscene(scene, speed){
-	
+	inputAllowed = false;
 	var length = scene.length
 	console.log(length);
 	
@@ -35,114 +63,10 @@ function cutscene(scene, speed){
 		setTimeout(line, speed*i);
 		
 	}
+	Ready_For_Input();
 }
 
 //-------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-function respo1 () {
-	inputAllowed = false;
-	
-	function line1(){
-		addNewLogItem("comp", "Hello, I am Jeff. Who do I have the pleaseure of speeking with today?");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-}
-
-function respo2 () {
-	inputAllowed = false;
-	
-	function line1(){
-		addNewLogItem("comp", "It's nice to meet you, Joe. What can I help you with today?");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-}
-
-function respo3 () {
-	inputAllowed = false;
-	
-	function line1(){
-		playFailSound(400,3);
-		addNewLogItem("", "Language not recognized. Would you like to continue in Russian? Enter да or No.");
-	};
-	
-	function line2(){
-		addNewLogItem("comp", " I’m sorry there seems to be a problem with our language recognition. Would you mind entering ‘No’ please? I can’t address this from my end.");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-	setTimeout(line2, 6000);
-}
-
-function respo4 () {
-	inputAllowed = false;
-	
-	function line1(){
-		playFailSound(400,3);
-		addNewLogItem("", "Language not recognized. ");
-	};
-	
-	function line2(){
-		addNewLogItem("", " Пожалуйста, введите желаемый язык");
-	};
-	
-	function line3(){
-		addNewLogItem("comp", " UH OH... Shes angry");
-		Ready_For_Input();
-	};
-	
-	function line4(){
-		addNewLogItem("comp", "I apologize for the inconvenience. Can you please enter the Russian word for english? That seems to be the only way the system will respond...");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-	setTimeout(line2, 4000);
-	setTimeout(line3, 6000);
-	setTimeout(line4, 8000);
-}
-
-function respo5 () {
-	inputAllowed = false;
-	
-	playFailSound(500,3);
-	
-	function line1(){
-		addNewLogItem("comp", "Hmmm... One moment. lemme see if i can fix this...");
-	};
-	
-		function line2(){
-		addNewLogItem("", "Cuir a-steach an cànan a tha thu ag iarraidh");
-		playFailSound(500,3);
-	};
-	
-	function line3(){
-		addNewLogItem("comp", "Nope");
-	};
-	
-	function line4(){
-		addNewLogItem("comp", "I Have no idea what that says");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-	setTimeout(line2, 6000);
-	setTimeout(line3, 8000);
-	setTimeout(line4, 10000);
-}
 
 function respo6 () {
 	inputAllowed = false;
@@ -891,6 +815,9 @@ function connectingAnimation() {
     setTimeout(function() {
         document.getElementById('header').innerHTML = "You Are Now Speaking with Jeff"
     }, 3000);
+	setTimeout(cutscene(s1p1, 2000), 5000);
+	
+	
 }
 
 function addMessageSpace() {

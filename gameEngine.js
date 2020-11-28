@@ -55,8 +55,6 @@ window.onload = function(){
 	//var framerPerSecond = 0.50
     
     connectingAnimation();
-	cutscene(s1p1, 2000);
-	//setTimeout(respo1, 2000);
    // addMessageSpace();
 
 };
@@ -105,7 +103,7 @@ function addNewLogItem(user, txt, blue=false) {
         last_message = "player";
         last_message_elem = msg;
 		
-	} else if(user == "comp") {
+	} else if(user == "jeff") {
         
         let typing_time = ms_per_char * txt.length;
         let typing_log_item = startTypingAnimation();
@@ -143,7 +141,7 @@ function addNewLogItem(user, txt, blue=false) {
         }, typing_time);
 		
 		
-	} else if(user == "") {
+	} else if(user == "system") {
 		
 		var btn = document.createElement("h2");
         btn.className = "log-item";

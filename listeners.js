@@ -40,15 +40,16 @@ function checkPlayerInput() {
 	
 	if(section == 1 && puzzle == 1) {
 		playerTXT = playerUsername
-		respo2();
+		cutscene(s1p2,2000);
 		puzzle = 2
 		
 	} else if(section == 1 && puzzle == 2) {
-		respo3();
+		cutscene(s1p3,2000);
+		playFailSound(400,3);
 		puzzle = 3
 	} else if(section == 1 && puzzle == 3) {
 		if (playerTXT == "no" || "No" || "NO"){
-				respo4();
+				cutscene(s1p4,2000);
 				puzzle = 4
 		} else if (playerTXT == "yes" || "Yes" || "YEs" || "YES"){
 			console.log('player said yes!');
@@ -59,7 +60,7 @@ function checkPlayerInput() {
 		}
 	}  else if(section == 1 && puzzle == 4) {
 		if(playerTXT == "английский") {
-			respo5();
+			cutscene(s1p3,2000);
 			puzzle = 5
 		} else {
 			languageFail();
