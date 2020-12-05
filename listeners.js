@@ -17,6 +17,8 @@ var hintCode = "001";
 var section = 1;
 var puzzle = 1;
 
+var playerUsername = "";
+
 function checkPlayerInput() {
 	
     //Music
