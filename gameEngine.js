@@ -55,8 +55,6 @@ window.onload = function(){
 	//var framerPerSecond = 0.50
     
     connectingAnimation();
-	cutscene(s1p1, 2000);
-	//setTimeout(respo1, 2000);
    // addMessageSpace();
 
 };
@@ -105,7 +103,7 @@ function addNewLogItem(user, txt, blue=false) {
         last_message = "player";
         last_message_elem = msg;
 		
-	} else if(user == "comp") {
+	} else if(user == "jeff") {
         
         let typing_time = ms_per_char * txt.length;
         let typing_log_item = startTypingAnimation();
@@ -143,7 +141,7 @@ function addNewLogItem(user, txt, blue=false) {
         }, typing_time);
 		
 		
-	} else if(user == "") {
+	} else if(user == "system") {
 		
 		var btn = document.createElement("h2");
         btn.className = "log-item";
@@ -204,9 +202,7 @@ function clearTxtBox(){
 function keyPressed(evt) {
 	
 	//console.log(evt.keyCode);
-	
-	
-	
+
 	if(inputAllowed){
 		if(evt.keyCode == ENTER) {
 			let button_beep = document.createElement('audio');
@@ -231,38 +227,3 @@ function keyReleased(evt) {
 		ENTER_DOWN = false;
 	} 
 };
-
-
-//Moving button
-
-var URL = "http://example.com";
-
-function doMovingButton() {
-    var moving_button = document.createElement('button');
-    document.body.appendChild(moving_button);
-    moving_button.style.position = "absolute";
-    moving_button.style.top = "50%";
-    moving_button.style.right = "50%";
-    moving_button.style.width = "60px";
-    moving_button.style.height = "40px";
-    moving_button.innerHTML = "Test Button";
-    
-    var times_hovered = 0;
-    
-    moving_button.onmouseover = function() {
-        
-        if (times_hovered < 4) {
-            let new_x = 200 + Math.floor(Math.random() * (window.innerWidth - 200));
-            let new_y = 200 + Math.floor(Math.random() * (window.innerHeight - 200));
-            moving_button.style.top = new_y + "px";
-            moving_button.style.right = new_x + "px";
-            times_hovered++;
-        }
-        else if (times_hovered == 4) {
-            moving_button.onclick = function() {
-                window.location = URL;
-            }
-        }
-    }
-    
-}

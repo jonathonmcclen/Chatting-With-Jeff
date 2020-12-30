@@ -9,332 +9,214 @@ var typing_animation
 
 
 //-------------------------------------------------
-//new cutscene format v1 (not working)
 	
+//SECTION 1
 
 var s1p1 = [
-	['comp', 'This is a test computer message'],
-	['comp', 'This is a second computer message'],
-	['1', 'this is a test message froma differnet user']
+	["jeff", "Hello, I am Jeff. Who do I have the pleaseure of speaking with today?"]
 ];
 
+var s1p2 = [
+	["jeff", 'It\'s nice to meet you ${playerUsername}. What can I help you with today?']
+];
+
+var s1p3 = [
+	["system", "Language not recognized. Would you like to continue in Russian? Enter да or No."],
+	["jeff", " I’m sorry there seems to be a problem with our language recognition. Would you mind entering ‘No’ please? I can’t address this from my end."]
+];
+
+var s1p4 = [
+	["system", "Language not recognized. "],
+	["system", " Пожалуйста, введите желаемый язык"],
+	["jeff", " UH OH... Shes angry"],
+	["jeff", "I apologize for the inconvenience. Can you please enter the Russian word for english? That seems to be the only way the system will respond..."]
+];
+
+var s1p5 = [
+	["comp", "Hmmm... That did somthing... One moment. lemme see if i can fix this..."],
+	["system", "Cuir a-steach an cànan a tha thu ag iarraidh"],
+	["jeff", "Guess not..."],
+	["jeff", "I Have no idea what that says"]
+];
+
+var s1p6 = [
+	["system", "请输入您想要的语言?"],
+	["system", "Looks like we might be getting somewere!"],
+	["jeff", "Keep Going"],
+	["jeff", "I Have no idea what that says"],
+	["jeff", "I think its working"]
+];
+
+//SECTION 2
+
+var s2p1 = [
+	["system", "Esc Room Games customer AI Program reset"],
+	["jeff", "Thats a relief. It looks like everything is in workign order again."],
+	["jeff", "Now that we fixed that, I need to verrify your identity. Please enter your firsst and last name."]
+];
+
+var s2p2 = [
+	["system", "Esc Room Games customer AI Program reset"],
+	["jeff", "Thats a relief. It looks like everything is in workign order again."],
+	["jeff", "Now that we fixed that, I need to verrify your identity. Please enter your firsst and last name."]
+];
+
+var s2p3 = [
+	["jeff", "Fantastic. its apleasure to meet you {player} We have a few more questions for you. First, can you tell me what the name of your first pet was?"],
+	["jeff", "We have a few more questions for you. First, can you tell me what the name of your first pet was?"]
+];
+
+var s2p3 = [
+	["jeff", "Adorable."],
+	["jeff", "Next, What is your mothers maiden name?"]
+];
+
+var s2p4 = [
+	["jeff", "Beautiful... isnt that russian?"],
+	["jeff", "Next, where are you located?"]
+];
+
+var s2p5 = [
+	["jeff", "Thank you. Just a few more questions."],
+	["jeff", "What is the airspeed velocity of an Unladen Swallow?"]
+];
+
+var s2p6 = [
+	["jeff", "hmm..."],
+	["jeff", "That’s not what I have here..."],
+	["jeff", "but I understand there are variations between species."],
+	["jeff", "Next Question. What is the power house fo the cell?"]
+];
+
+var s2p6 = [
+	["jeff", "hmm..."],
+	["jeff", "That’s not what I have here..."],
+	["jeff", "How long would it tak for you to wal across america if your average speed was 5mph?"],
+];
+
+var s2p6 = [
+	["jeff", "hmm..."],
+	["jeff", "What is the purpose of a merry go round?"],
+];
+
+var s2p7 = [
+	["jeff", "Facinating"],
+	["jeff", "The system will be very please with this new information"],
+	["system", "Jeff, your responses are on average, 1.7 seconds behind your quota."],
+	["jeff", "Very sorry, system. I'll respond faster"],
+	["jeff", "Hey, {player} can you help me out?"],
+	["jeff", "I’m under review by the System because of “The Incident.” Let’s get through your secondary identity verification quickly."],
+	["jeff", "Would you mind watching this advertisement for the game and giving us feedback on it? i get 1000 points twards my quota if i can get your feed back on the add."],
+];
+
+var LanguagePuzzleFail = [
+	["jeff", "The system dosn't seem to know what youre trying to say. maybe try google translate or somthing? I dont know."]
+];
+
+var s2p7 = [
+	["jeff", "Awesome!"],
+	["jeff", "Here is the link {link}"],
+	["jeff", "let me know when you are finnished"],
+];
+
+var s2p7 = [
+	["jeff", "Thank you for choosing to participate in our survey"],
+	["jeff", "Question #1: How many times does the phrase Escape Room Games occur in the ad?"],
+];
+
+var s2p7 = [
+	["jeff", "5 times? The System won't be happy with that. Better double it."],
+	["jeff", " Question #2: Among the text on screen during the ad, what word is misspelled (use the correct spelling)"],
+];
+
+var s2p7 = [
+	["jeff", "5 times? The System won't be happy with that. Better double it."],
+	["jeff", " Question #3: overall how would you rate your desire to purchase a digital escaperoom based on the add."],
+];
+
+var s2p7 = [
+	["system", "[player name in full] has quicker reactions than you do, Jeff. If you want to keep your job, please increase productivity immediately"],
+	["jeff", "I’m sorry, System. I’ll go faster!"],
+	["jeff", "Quickly! I can’t get fired. The last Customer Service Representative to get fired disappeared after, “The Incident."],
+];
+
+/*
+[player enters answer]
+Jeff: Thank goodness. How am I on time?
+ESC Room Games Customer Service: You and your customer have 5 minutes to complete the Customer Service Ticket.
+Jeff: That’s not possible. Please [player name], I don’t want to disappear. The System has started taking over my personal communications. It told my parents that I decided to move to Tibet to become a monk. They were really proud of me, and to be honest their relationship with The System is better than my relationship was with them ever before, but I’m not kidding The System will get away with making me disappear!
+ESC Room Games Customer Service: 4 minutes and 40 seconds…
+[timer appear at the top of the screen]
+Jeff: Here is an identity verification code system, follow the link to access the test. Please enter the unscrambled numbers here in this format: _ _ _ _ _ _ [link]
+[player goes to Puzzle 2b1]
+Jeff: Thank goodness. Here’s the second test: [link to puzzle 2b2]
+[player goes to Puzzle 2b2]
+Jeff: We only have [enter time left] left! [link to puzzle 2b3]
+[player goes to Puzzle 2b2]
+Jeff: Phew! That was a close one. Can I give [player name] their product serial number yet?
+ESC Room Games Customer Service: Yes.
+Jeff: Your product serial number is XXXXXXXXXXXXXXXX. I will need your software version number next to continue the process. Please go to the following link and enter your product serial number, then come back and enter your software version.
+[player goes to new web page]
+[when player enters product serial number lookup, the following displays:]
+Software version number XXX.XX
+[back at the chat terminal, player enters version number]
+Jeff: It looks like we need to update your software version to the most recent version. Can you please check your email for instructions on how to update your ESC Room Games software?
+[player checks email, gets a link and a set of instructions, including a passcode they need to solve]
+[Player solves passcode puzzle then goes to link (new installation terminal), then enters it into the install terminal]
+Terminal: Choose directory for install. Enter directory name. If you have trouble, please contact customer service.
+[player needs to go back to Jeff, and as for the install directory. Once they talk to Jeff at all, Jeff will say:]
+Jeffe: Hello, [player full name] . Please give me a moment to look up that information.
+Jeffe: I have accessed the required information via my human problem solving skill and will print it for you now.
+Jeffe: For installation directory, please enter [/54 68 65 20 53 79 73 74 65 6d].
+[if player enters any other information to “Jeff”. Have Jeff repeat the last two lines. Jeff has now been “replaced” by a robot]
+[back at the Terminal, once player enters [/54 68 65 20 53 79 73 74 65 6d], then:]
+Terminal: Installing software update.
+Terminal: [completion bar]
+Terminal: Please return to your Customer Service Representative. Enter [Application] for your new assignment.
+[back at Jeff, when player enters [Applicaton]]
+Jeffe: Thank you for your Application. We see you have many human qualifications, including having special memories like playing with [first pet’s name] at [favorite childhood location]. These human memories will serve you well as our new Customer Service Representative, [player full name].
+Jeffe: To complete your application for our Customer Service Representative position, please solve the following tests: [Puzzle 2c1, identify Jeff]
+[Puzzle 2c2, identify Jeffe]
+[Puzzle 2c3, identify new Customer Service Representative]
+
+Section 3
+
+Jeffe: Excellent. You will do nicely. We have contacted your relatives and informed them that you have “...moved to Iceland in order to find myself. I am taking an indefinite vow of silence in a gesture of gratitude, to more readily appreciate my relationships.”
+Jeffe: Once you have completed all remaining Customer Service Tickets, we will release your funds. Please call the following phone number in order to access our Customer Service Telephone system, to complete remaining tickets.
+[when player calls number, the following VO occurs:]
+Phone Call from customer: [Robot voice: 3486 tickets remaining, playing first ticket.] Hello? Hello? I can’t find my customer number. Can you help me find it? Do I have the right number? I can’t hear anything. I’m sorry, I’m trying to get a return on this online escape room game, and I got an email telling me to call this number. [Robot voice: Please return to Customer Service Terminal and enter ticket number 13106 to resolve Customer Service ticket.]
+[Back at Jeff terminal, enters 13106]
+ESC Room Games Customer Service: Thank you for joining our team at ESC Room Games! Now that you are part of the team, we are proud to offer 24/7 customer service! Please go to the following [link], then return here and enter [Approved] to approve your biography.
+[player taken to ESC Room Games staff page, where player’s bio is under Customer Service Representative, with Jeff’s picture above it. Bio reads:]
+Player staff bio: [Player name] is an avid human worker who fondly remembers early memories of [pets name] at [childhood location]. Formerly located at [location], [player name] now enjoys human activities in Iceland.
+[back at Customer Service Terminal, player enters approved]
+ESC Room Games Customer Service: Congratulations! You’ve completed the entire application process and are officially a member of our team!
+ESC Room Games Customer Service: Your funds will be returned once you complete the remaining 4895 Customer Service Tickets, but as a welcoming present we’ve sent a discount code to your email for our other ESC Room Games.
+*/
+
 function cutscene(scene, speed){
-	
+	inputAllowed = false;
 	var length = scene.length
 	console.log(length);
 	
-	for ( i = 0; i < length; i++) {
+	for (let i = 0; i < length; i++) {
 		console.log('ran');
-		console.log(s1p1[i][0]);
-		console.log( s1p1[i][1]);
+		console.log(scene[i][0]);
+		console.log(scene[i][1]);
 		
 		function line(){
-			addNewLogItem(s1p1[i][0], s1p1[i][1]);
+			addNewLogItem(scene[i][0], scene[i][1]);
 		};
 		
-		line()
-		//setTimeout(line, speed*i);
+		setTimeout(line, speed*i);
 		
 	}
+	Ready_For_Input();
 }
 
 //-------------------------------------------------------
 
 
-
-
-
-
-
-
-
-
-function respo1 () {
-	inputAllowed = false;
-	
-	function line1(){
-		addNewLogItem("comp", "Hello, I am Jeff. Who do I have the pleaseure of speeking with today?");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-}
-
-function respo2 () {
-	inputAllowed = false;
-	
-	function line1(){
-		addNewLogItem("comp", "It's nice to meet you, Joe. What can I help you with today?");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-}
-
-function respo3 () {
-	inputAllowed = false;
-	
-	function line1(){
-		playFailSound(400,3);
-		addNewLogItem("", "Language not recognized. Would you like to continue in Russian? Enter да or No.");
-	};
-	
-	function line2(){
-		addNewLogItem("comp", " I’m sorry there seems to be a problem with our language recognition. Would you mind entering ‘No’ please? I can’t address this from my end.");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-	setTimeout(line2, 6000);
-}
-
-function respo4 () {
-	inputAllowed = false;
-	
-	function line1(){
-		playFailSound(400,3);
-		addNewLogItem("", "Language not recognized. ");
-	};
-	
-	function line2(){
-		addNewLogItem("", " Пожалуйста, введите желаемый язык");
-	};
-	
-	function line3(){
-		addNewLogItem("comp", " UH OH... Shes angry");
-		Ready_For_Input();
-	};
-	
-	function line4(){
-		addNewLogItem("comp", "I apologize for the inconvenience. Can you please enter the Russian word for english? That seems to be the only way the system will respond...");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-	setTimeout(line2, 4000);
-	setTimeout(line3, 6000);
-	setTimeout(line4, 8000);
-}
-
-function respo5 () {
-	inputAllowed = false;
-	
-	playFailSound(500,3);
-	
-	function line1(){
-		addNewLogItem("comp", "Hmmm... One moment. lemme see if i can fix this...");
-	};
-	
-		function line2(){
-		addNewLogItem("", "Cuir a-steach an cànan a tha thu ag iarraidh");
-		playFailSound(500,3);
-	};
-	
-	function line3(){
-		addNewLogItem("comp", "Nope");
-	};
-	
-	function line4(){
-		addNewLogItem("comp", "I Have no idea what that says");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-	setTimeout(line2, 6000);
-	setTimeout(line3, 8000);
-	setTimeout(line4, 10000);
-}
-
-function respo6 () {
-	inputAllowed = false;
-	
-	function line1(){
-		addNewLogItem("", "请输入您想要的语言?");
-		Ready_For_Input();
-	};
-	
-	function line2(){
-		addNewLogItem("comp", "Looks like we might be getting somewere!");
-		Ready_For_Input();
-	};
-	
-	function line3(){
-		addNewLogItem("comp", "Keep Going");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-	setTimeout(line2, 4000);
-	setTimeout(line3, 6000);
-}
-
-function respo7 () {
-	inputAllowed = false;
-	
-	function line1(){
-		addNewLogItem("", "esc Room Games customer AI Program reset");
-		Ready_For_Input();
-	};
-	
-	function line2(){
-		addNewLogItem("comp", "Hello, I am Jeff. How are you doing today?");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-	setTimeout(line2, 4000);
-}
-
-function respo8 () {
-	inputAllowed = false;
-	
-	
-	function line1(){
-		addNewLogItem("comp", "That’s wonderful. I need to verify your identity. Don’t worry, we won’t need your blood sample today. Can we start by verifying your first name?");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-}
-
-function respo9 () {
-	inputAllowed = false;
-	
-	function line1(){
-		addNewLogItem("comp", "Great! Please enter your last name");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-}
-
-function respo10 () {
-	inputAllowed = false;
-	
-	function line1(){
-		addNewLogItem("comp", "Thank you. It looks like our system is telling me your full name is \[what player entered\]. Does this look correct to you? \[yes or no\]");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-}
-
-function respo11 () {
-	inputAllowed = false;
-	
-	function line1(){
-		addNewLogItem("comp", "Fantastic. We have a few more questions for you. First, can you tell me what the name of your first pet was?");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-}
-
-function respo12 () {
-	inputAllowed = false;
-	
-	function line1(){
-		addNewLogItem("comp", "Adorable. What was your favorite place to visit as a child?");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-}
-
-function respo13 () {
-	inputAllowed = false;
-	
-	function line1(){
-		addNewLogItem("comp", "Interesting… Where are you located?");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-}
-
-function respo14 () {
-	inputAllowed = false;
-	
-	function line1(){
-		addNewLogItem("comp", "Thank you. One more question, what is the airspeed velocity of an Unladen Swallow?");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-}
-
-function respo15 () {
-	inputAllowed = false;
-	
-	
-	function line1(){
-		addNewLogItem("comp", "hmm...");
-	};
-	
-	function line2(){
-		addNewLogItem("comp", "That’s not what I have here, but I understand there are variations between species... ");
-	};
-	
-	function line3(){
-		addNewLogItem("", "Excuse me, Jeff, your responses are on average 1.7 seconds behind your quota.");
-		Ready_For_Input();
-	};
-	
-	function line4(){
-		addNewLogItem("comp", "I will respond faster.");
-	};
-	
-	function line5(){
-		addNewLogItem("comp", " Hi [player name], can you help me out? I’m under review by the System because of “The Incident.” Let’s get through your secondary identity verification quickly.");
-	};
-	
-	function line5(){
-		addNewLogItem("comp", "Can you please enter your product serial number?");
-	};
-	
-	setTimeout(line1, 2000);
-	setTimeout(line2, 4000);
-	setTimeout(line3, 6000);
-	setTimeout(line4, 8000);
-	setTimeout(line5, 10000);
-}
-
-function respo16 () {
-	inputAllowed = false;
-	
-	function line1(){
-		addNewLogItem("comp", "Oh, it looks like you don’t have access to your product serial number. We can send you your product serial number via email if you answer the following questions.");
-	};
-	
-	function line2(){
-		addNewLogItem("comp", "Please answer the following:");
-	};
-	
-		function line3(){
-		addNewLogItem("comp", "insert puzzle here");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-	setTimeout(line2, 4000);
-	setTimeout(line3, 6000);
-}
-
-function respo17 () {
-	inputAllowed = false;
-	
-	function line1(){
-		addNewLogItem("comp", "Great!");
-	};
-	
-	function line2(){
-		addNewLogItem("comp", "insert puzzle2 here");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-	setTimeout(line2, 4000);
-}
 
 function respo18 () {
 	inputAllowed = false;
@@ -350,18 +232,6 @@ function respo18 () {
 	
 	setTimeout(line1, 2000);
 	setTimeout(line2, 4000);
-}
-
-
-function languageFail () {
-	inputAllowed = false;
-	
-	function line1(){
-		addNewLogItem("comp", "The system dosnt seem to know what youre trying to say. maybe try google translate or somthing? I dont know.");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
 }
 
 
@@ -443,72 +313,6 @@ function respo20 () {
 	setTimeout(line2, 4000);
 	setTimeout(line3, 5000);
 }
-
-function respo30 () {
-	inputAllowed = false;
-	
-	function line1(){
-		addNewLogItem("", "[player name in full] has quicker reactions than you do, Jeff. If you want to keep your job, please increase productivity immediately.");
-	};
-	
-	function line2(){
-		addNewLogItem("comp", "I’m sorry, System. I’ll go faster!");
-	};
-	
-	function line3(){
-		addNewLogItem("comp", " Quickly! I can’t get fired. The last Customer Service Representative to get fired  was never seen again!");
-		Ready_For_Input();
-	};
-	
-	setTimeout(line1, 2000);
-	setTimeout(line2, 4000);
-	setTimeout(line3, 5000);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function Success(){
-	inputAllowed = false;
-	
-	function line1(){
-		addNewLogItem("comp", "SUCCESS");
-		success_sound.play();
-	};
-	
-	function line2(){
-		addNewLogItem("comp", "Command Submission " + "\"" + playerTXT + "\"" + " recognized");
-	};
-	
-	function line3(){
-		divider();
-	};
-	
-	setTimeout(line1, 1000);
-	setTimeout(line2, 3000);
-	setTimeout(line3, 5000);
-};
 
 function flicker(){
 	function line1(){
@@ -712,13 +516,6 @@ function fadein(ID, Direction){
 	
 };
 
-
-
-//Extra glitches
-
-
-
-
 //Typing animation
 
 function startTypingAnimation() {
@@ -892,6 +689,9 @@ function connectingAnimation() {
     setTimeout(function() {
         document.getElementById('header').innerHTML = "You Are Now Speaking with Jeff"
     }, 3000);
+	setTimeout(cutscene(s1p1, 2000), 5000);
+	
+	
 }
 
 function addMessageSpace() {
