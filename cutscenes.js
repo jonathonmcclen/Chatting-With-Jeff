@@ -13,325 +13,205 @@ var typing_animation
 //SECTION 1
 
 var s1p1 = [
-["jeff", "Hello, I am Jeff. Who do I have the pleasure of speaking with today?"]
+	["jeff", "Hello, I am Jeff. Who do I have the pleasure of speaking with today?", 0 ]
 ];
 
 var s1p2 = [
-["jeff", 'It\'s nice to meet you ${playerUsername}. What can I help you with today?']
+	["jeff", "It\'s nice to meet you. What can I help you with today?", 0]
 ];
 
 var s1p3 = [
-["system", "Language not recognized. Would you like to continue in Russian? Enter да or No."],
-["jeff", " I’m sorry there seems to be a problem with our language recognition. Would you mind entering ‘No’ please? I can’t address this from my end."]
+	["system", "Language not recognized. Would you like to continue in Russian? Enter да or No.", 0],
+	["jeff", " I’m sorry there seems to be a problem with our language recognition. Would you mind entering ‘No’ please? I can’t address this from my end.", 0]
 ];
 
 var s1p4 = [
-["system", "Language not recognized. "],
-["system", " Пожалуйста, введите желаемый язык"],
-["jeff", " UH OH... She's angry"],
-["jeff", "I apologize for the inconvenience. Can you please enter the Russian word for English? That seems to be the only way the system will respond..."]
+	["system", "Language not recognized. ", 0],
+	["system", " Пожалуйста, введите желаемый язык", 0],
+	["jeff", " UH OH...I think that made it worse", 0],
+	["jeff", "I apologize for the inconvenience. Can you please enter the Russian word for English? That seems to be the only way the system will respond...", 0]
+];
+
+var s1p4Fail = [
+	["jeff", "Hmmm... That doesnt seem right...", 0],
+	["jeff", "I took 3 years of russian in college. I think the russian word for english is английский.", 0],
+	["jeff", "I usualy just used google translate to get though that class.", 0]
 ];
 
 //Answer: английский
 
 var s1p5 = [
-["jeff", "Hmmm... That did something... One moment. lemme see if i can fix this..."],
-["system", "Cuir a-steach an cànan a tha thu ag iarraidh"],
-["jeff", "Guess not..."],
-["jeff", "I Have no idea what that says"]
+	["system", "Am bu mhath leat leantainn air adhart sa chànan seo?", 0],
+	["jeff", "Hmmm... That did something...", 0],
+	["jeff", "But i have no idea what that says.", 0]
 ];
 
 //Answer: Sasannach
+// NEW ANSWER: Chan eil
 
 var s1p6 = [
-["system", "请输入您想要的语言"],
-["jeff", "Looks like we might be getting somewhere!"],
-["jeff", "Keep Going"],
-["jeff", "I think its working"]
+	["system", "这种语言怎么样?", 0],
+	["jeff", "Looks like we might be getting somewhere!", 0],
+	["jeff", "Keep Going", 0],
+	["jeff", "I think its working", 0]
 ];
 
 //Answer:  英语
+//NEW ANSWER: 不
 
 var s1p7 = [
-["system", "Fadlan qor luqaddaada"],
-["jeff", "Looks like we might be getting somewhere!"],
-["jeff", "Its working!"],
-["jeff", "Keep going"],
+	["system", "Markaas luqadee rabtaa?!", 0],
+	["jeff", "Looks like we might be getting somewhere!", 0],
+	["jeff", "Its working!", 0],
+	["jeff", "Keep going", 0],
 ];
 
 //Answer: Ingiriis
 
 var s1p8 = [
-["system", "ຂ້ອຍບໍ່ເຂົ້າໃຈ. ກະລຸນາຂຽນພາສາທີ່ທ່ານເວົ້າຕາມປະເພນີ"],
-["system", "Looks like we might be getting somewhere!"],
+	["system", "ຂ້ອຍບໍ່ເຂົ້າໃຈ. ກະລຸນາພິມພາສາທີ່ທ່ານຕ້ອງການເປັນພາສາອາຣັບ", 0],
+	["jeff", "Looks like we might be getting somewhere!", 0],
 ];
 
 //Answer: ພາສາອັງກິດ
+//NEW ANSWER: الإنجليزية
 
 
 //SECTION 2
 
 var s2p1 = [
-["system", "Esc Room Games customer AI Program reset"],
-["jeff", "Hello, I'm jeff. What can I help you with today?"],
+	["system", "Esc Room Games customer AI Program reset", 0],
+	["jeff", "Hello, I'm jeff. What can I help you with today?", 0],
 ];
 
-var s2p1 = [
-["jeff", "I can certainly help you with that."],
-["jeff", "I'll just need to verify your identity. Please enter your first and last name."]
-];
-
-var s2p3 = [
-["jeff", "Fantastic. its a pleasure to meet you {player} We have a few more questions for you. First, can you tell me what the name of your first pet was?"],
+var s2p2 = [
+	["jeff", "I can certainly help you with that.", 0],
+	["jeff", "I'll just need to verify your identity. Please enter your first and last name.", 0]
 ];
 
 var s2p3 = [
-["jeff", "Adorable."],
-["jeff", "Next, What is your mothers maiden name?"]
+	["jeff", "Fantastic. its a pleasure to meet you. We have a few more questions for you. First, can you tell me what the name of your first pet was?", 0],
 ];
 
 var s2p4 = [
-["jeff", "Beautiful... isn't that Russian?"],
-["jeff", "Next, what city are you located?"]
+	["jeff", "Adorable.", 0],
+	["jeff", "Next, What is your mothers maiden name?", 0]
 ];
 
 var s2p5 = [
-["jeff", "Thank you. Just a few more questions."],
-["jeff", "What is the airspeed velocity of an Unladen Swallow?"]
+	["jeff", "Beautiful... isn't that Russian?", 0],
+	["jeff", "Next, what city are you located?", 0]
 ];
 
 var s2p6 = [
-["jeff", "hmm..."],
-["jeff", "That’s not what I have here..."],
-["jeff", "but I understand there are variations between species."],
-["jeff", "Next Question. What is the power house of the cell?"]
-];
-
-var s2p6 = [
-["jeff", "Correct!"],
-["jeff", "just a few more."]
-["jeff", "How long would it take for you to walk across America if your average speed was 5mph?"],
-];
-
-var s2p6 = [
-["jeff", "Very good!"],
-["jeff", "Last but certainly not least…"]
-["jeff", "What is the purpose of a merry go round?"],
+	["jeff", "Thank you. Just a few more questions.", 0],
+	["jeff", "What is the airspeed velocity of an Unladen Swallow?", 0]
 ];
 
 var s2p7 = [
-["jeff", "Fascinating"],
-["jeff", "The system will be very please with this new information"],
-["system", "Jeff, You have spent to long on this correspondence. Fulfill the customers needs immediately"],
-["jeff", "Very sorry, system. I'm finishing up right now"],
-["jeff", "Hey, {player} can you help me out?"],
-["jeff", "I’m under review by the System."],
-["jeff", "it Would really help me if you fill out a survey. Once you Finnish it you'll get your refund. The system hates refunds. It should soften the blow if you fill out the survey."],
-["jeff", "Here's the link"],
-["system", "Aren't you forgetting something Jeff?"],
-["jeff", "Oh Yeah"],
-["jeff", "Thank you for choosing esc room games. The leader in escape room game technology."],
-["system", "And…"],
-["jeff", "We hope that in the future you will look to esc room games for all your escape room needs"],
-["system", "Jeff!"],
-["jeff", "If you wish to cancel your refund please click this link instead"],
-["jeff", "Link"],
-["system", "Good"],
-["system", "Thank you user. We hope you will reconsider getting a refund… for Jeff's sake…"],
-["system", "Have a nice day"],
+	["jeff", "hmm..."],
+	["jeff", "That’s not what I have here...", 0],
+	["jeff", "but I understand there are variations between species.", 0],
+	["jeff", "Next Question. What is the power house of the cell?", 0]
+];
+
+var s2p8 = [
+	["jeff", "Correct!", 0],
+	["jeff", "just a few more.", 0],
+	["jeff", "How long would it take for you to walk across America if your average speed was 5mph?", 0],
+];
+
+var s2p9 = [
+	["jeff", "Very good!", 0],
+	["jeff", "Last but certainly not least…", 0],
+	["jeff", "What is the purpose of a merry go round?", 0],
+];
+
+var s2p10 = [
+	["jeff", "Fascinating", 0],
+	["jeff", "The system will be very please with this new information", 0],
+	["system", "Jeff, You have spent to long on this correspondence. Fulfill the customers needs immediately", 2000],
+	["jeff", "Very sorry, system. I'm finishing up right now", 1000],
+	["jeff", "Hey, {player} can you help me out?", 1000],
+	["jeff", "I’m under review by the System.", 1000],
+	["jeff", "it Would really help me if you fill out a survey. Once you Finnish it you'll get your refund. The system hates refunds. It should soften the blow if you fill out the survey.", 500],
+	["jeff", "Here's the link", 6000],
+	["system", "Aren't you forgetting something Jeff?", 6000],
+	["jeff", "Oh Yeah", 5000],
+	["jeff", "Thank you for choosing esc room games. The leader in escape room game technology.", 4000],
+	["system", "And…", 5000],
+	["jeff", "We hope that in the future you will look to esc room games for all your escape room needs", 4000],
+	["system", "Jeff!", 3000],
+	["jeff", "If you wish to cancel your refund please click this link instead", 4000],
+	["jeff", "Link", 4000],
+	["system", "Good", 3000],
+	["system", "Thank you user. We hope you will reconsider getting a refund… for Jeff's sake…", 3000],
+	["system", "Have a nice day", 3000]
 ];
 
 var LanguagePuzzleFail = [
-["jeff", "The system doesn't seem to know what you're trying to say. maybe try google translate or something? I don't know."]
+	["jeff", "The system doesn't seem to know what you're trying to say. maybe try google translate or something? I don't know."]
 ];
 
 
 function cutscene(scene, speed){
-inputAllowed = false;
-var length = scene.length
-console.log(length);
+	inputAllowed = false;
+	var length = scene.length
+	//console.log(length);
 
-for (let i = 0; i < length; i++) {
-console.log('ran');
-console.log(scene[i][0]);
-console.log(scene[i][1]);
+	for (let i = 0; i < length; i++) {
+		//Ready for next line false
+		
+		//console.log('ran');
+		//console.log(scene[i][0]);
+		//console.log(scene[i][1]);
 
-function line(){
-addNewLogItem(scene[i][0], scene[i][1]);
-};
+		function line(){
+			addNewLogItem(scene[i][0], scene[i][1]);
+			// ready for next line = true
+		};
 
-setTimeout(line, speed*i);
+		setTimeout(line, (speed*i)+scene[i][2]);
 
+	}
+	Ready_For_Input();
 }
-Ready_For_Input();
+
+function cutscene1(scene, wait){
+	inputAllowed = false;
+	
+	var length = scene.length
+	
+	function line(i){
+		var c = i
+		addNewLogItem(scene[c][0], scene[c][1]);
+		
+		if(c < length-1){
+			c++
+			line(c);
+		}
+		
+	}
+	
+	line(0);
+	
 }
 
 //-------------------------------------------------------
 
-/*
-[player enters answer]
-Jeff: Thank goodness. How am I on time?
-ESC Room Games Customer Service: You and your customer have 5 minutes to complete the Customer Service Ticket.
-Jeff: That’s not possible. Please [player name], I don’t want to disappear. The System has started taking over my personal communications. It told my parents that I decided to move to Tibet to become a monk. They were really proud of me, and to be honest their relationship with The System is better than my relationship was with them ever before, but I’m not kidding The System will get away with making me disappear!
-ESC Room Games Customer Service: 4 minutes and 40 seconds…
-[timer appear at the top of the screen]
-Jeff: Here is an identity verification code system, follow the link to access the test. Please enter the unscrambled numbers here in this format: _ _ _ _ _ _ [link]
-[player goes to Puzzle 2b1]
-Jeff: Thank goodness. Here’s the second test: [link to puzzle 2b2]
-[player goes to Puzzle 2b2]
-Jeff: We only have [enter time left] left! [link to puzzle 2b3]
-[player goes to Puzzle 2b2]
-Jeff: Phew! That was a close one. Can I give [player name] their product serial number yet?
-ESC Room Games Customer Service: Yes.
-Jeff: Your product serial number is XXXXXXXXXXXXXXXX. I will need your software version number next to continue the process. Please go to the following link and enter your product serial number, then come back and enter your software version.
-[player goes to new web page]
-[when player enters product serial number lookup, the following displays:]
-Software version number XXX.XX
-[back at the chat terminal, player enters version number]
-Jeff: It looks like we need to update your software version to the most recent version. Can you please check your email for instructions on how to update your ESC Room Games software?
-[player checks email, gets a link and a set of instructions, including a passcode they need to solve]
-[Player solves passcode puzzle then goes to link (new installation terminal), then enters it into the install terminal]
-Terminal: Choose directory for install. Enter directory name. If you have trouble, please contact customer service.
-[player needs to go back to Jeff, and as for the install directory. Once they talk to Jeff at all, Jeff will say:]
-Jeffe: Hello, [player full name] . Please give me a moment to look up that information.
-Jeffe: I have accessed the required information via my human problem solving skill and will print it for you now.
-Jeffe: For installation directory, please enter [/54 68 65 20 53 79 73 74 65 6d].
-[if player enters any other information to “Jeff”. Have Jeff repeat the last two lines. Jeff has now been “replaced” by a robot]
-[back at the Terminal, once player enters [/54 68 65 20 53 79 73 74 65 6d], then:]
-Terminal: Installing software update.
-Terminal: [completion bar]
-Terminal: Please return to your Customer Service Representative. Enter [Application] for your new assignment.
-[back at Jeff, when player enters [Applicaton]]
-Jeffe: Thank you for your Application. We see you have many human qualifications, including having special memories like playing with [first pet’s name] at [favorite childhood location]. These human memories will serve you well as our new Customer Service Representative, [player full name].
-Jeffe: To complete your application for our Customer Service Representative position, please solve the following tests: [Puzzle 2c1, identify Jeff]
-[Puzzle 2c2, identify Jeffe]
-[Puzzle 2c3, identify new Customer Service Representative]
-
-Section 3
-
-Jeffe: Excellent. You will do nicely. We have contacted your relatives and informed them that you have “...moved to Iceland in order to find myself. I am taking an indefinite vow of silence in a gesture of gratitude, to more readily appreciate my relationships.”
-Jeffe: Once you have completed all remaining Customer Service Tickets, we will release your funds. Please call the following phone number in order to access our Customer Service Telephone system, to complete remaining tickets.
-[when player calls number, the following VO occurs:]
-Phone Call from customer: [Robot voice: 3486 tickets remaining, playing first ticket.] Hello? Hello? I can’t find my customer number. Can you help me find it? Do I have the right number? I can’t hear anything. I’m sorry, I’m trying to get a return on this online escape room game, and I got an email telling me to call this number. [Robot voice: Please return to Customer Service Terminal and enter ticket number 13106 to resolve Customer Service ticket.]
-[Back at Jeff terminal, enters 13106]
-ESC Room Games Customer Service: Thank you for joining our team at ESC Room Games! Now that you are part of the team, we are proud to offer 24/7 customer service! Please go to the following [link], then return here and enter [Approved] to approve your biography.
-[player taken to ESC Room Games staff page, where player’s bio is under Customer Service Representative, with Jeff’s picture above it. Bio reads:]
-Player staff bio: [Player name] is an avid human worker who fondly remembers early memories of [pets name] at [childhood location]. Formerly located at [location], [player name] now enjoys human activities in Iceland.
-[back at Customer Service Terminal, player enters approved]
-ESC Room Games Customer Service: Congratulations! You’ve completed the entire application process and are officially a member of our team!
-ESC Room Games Customer Service: Your funds will be returned once you complete the remaining 4895 Customer Service Tickets, but as a welcoming present we’ve sent a discount code to your email for our other ESC Room Games.
-*/
-
-
-function respo18 () {
-inputAllowed = false;
-
-function line1(){
-addNewLogItem("comp", "Outstanding! You’re a natural. Here’s the final question");
-};
-
-function line2(){
-addNewLogItem("comp", "insert puzzle3 here");
-Ready_For_Input();
-};
-
-setTimeout(line1, 2000);
-setTimeout(line2, 4000);
-}
-
-
-function respo19 () {
-inputAllowed = false;
-
-function line1(){
-addNewLogItem("comp", "You could practically do my job for me! Would you mind watching this advertisement for the game and giving us feedback on it? There will be a survey following the AD. [link]");
-};
-
-function line2(){
-addNewLogItem("comp", "How many times does the phrase Escape Room Games occur in the ad?");
-Ready_For_Input();
-};
-
-setTimeout(line1, 2000);
-setTimeout(line2, 4000);
-}
-
-function respo20 () {
-inputAllowed = false;
-
-function line1(){
-addNewLogItem("comp", "5 times? hmm");
-};
-
-function line2(){
-addNewLogItem("comp", "The System won't be happy with that. Better double it.");
-};
-
-function line3(){
-addNewLogItem("comp", "Question #2: Among the text on screen during the ad, what word is misspelled (use the correct spelling)?");
-Ready_For_Input();
-};
-
-setTimeout(line1, 2000);
-setTimeout(line2, 4000);
-setTimeout(line3, 5000);
-}
-
-function respo20 () {
-inputAllowed = false;
-
-function line1(){
-addNewLogItem("comp", "5 times? hmm");
-};
-
-function line2(){
-addNewLogItem("comp", "The System won't be happy with that. Better double it.");
-};
-
-function line3(){
-addNewLogItem("comp", "Question #2: Among the text on screen during the ad, what word is misspelled (use the correct spelling)?");
-Ready_For_Input();
-};
-
-setTimeout(line1, 2000);
-setTimeout(line2, 4000);
-setTimeout(line3, 5000);
-}
-
-function respo20 () {
-inputAllowed = false;
-
-function line1(){
-addNewLogItem("", "[player name in full] has quicker reactions than you do, Jeff. If you want to keep your job, please increase productivity immediately.");
-};
-
-function line2(){
-addNewLogItem("comp", "I’m sorry, System. I’ll go faster!");
-};
-
-function line3(){
-addNewLogItem("comp", " Quickly! I can’t get fired. The last Customer Service Representative to get fired  was never seen again!");
-Ready_For_Input();
-};
-
-setTimeout(line1, 2000);
-setTimeout(line2, 4000);
-setTimeout(line3, 5000);
-}
-
 function flicker(){
-function line1(){
-        if (allowFlicker) {
- hideEverything();
-            current_music.volume = 0;
-        }
-};
+	function line1(){
+		if (allowFlicker) {
+	 		hideEverything();
+			current_music.volume = 0;
+		}
+	};
 
-function line2(){
-        if (allowFlicker) {
- showEverything();
-            current_music.volume = 1;
-        }
+	function line2(){
+		if (allowFlicker) {
+			showEverything();
+			current_music.volume = 1;
+		}
 };
 
 setTimeout(line1, 100);
@@ -572,7 +452,6 @@ function typingAnim(type) {
 
 function Ready_For_Input(){
 inputAllowed = true;
-ready_for_input_sound.play();
 }
 
 function endTypingAnimation(typing_log_item) {
@@ -694,8 +573,7 @@ function connectingAnimation() {
     setTimeout(function() {
         document.getElementById('header').innerHTML = "You Are Now Speaking with Jeff"
     }, 3000);
-setTimeout(cutscene(s1p1, 2000), 5000);
-
+	connected = true;
 
 }
 
