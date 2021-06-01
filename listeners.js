@@ -1,14 +1,17 @@
 
-var hintCode = "001";
-var scene = 1;
-var playerUsername = "";
+let scene = 1;
+let playerUsername = "";
 
 
 // END VAR SECTION -----------------------------------------------------------------------------
 
 
 function checkPlayerInput() {
-
+	
+	playerTXT = playerTXT.trim()
+	//.toLowerCase()
+	
+	
     //Music
 if (playerTXT == "music") {
 	if (music_on) {
@@ -84,7 +87,7 @@ if(scene == 1) {
 	}
 
 } else if(scene == 5) {
-	if(playerTXT == "Chan eil") {
+	if(playerTXT.toLowerCase() == "chan eil") {
 		playFailSound(400,3);
 		cutscene(s1p6,3000);
 		scene++;
@@ -102,7 +105,7 @@ if(scene == 1) {
 		cutscene(LanguagePuzzleFail,3000);
 	}
 } else if(scene == 7) {
-	if(playerTXT == "Ingiriis") {
+	if(playerTXT.toLowerCase() == "ingiriisi") {
 		playFailSound(400,3);
 		cutscene(s1p8,3000);
 		scene++;
@@ -132,14 +135,26 @@ if(scene == 1) {
 	cutscene(s2p5,3000);
 	scene++;
 } else if(scene == 13) {
-	cutscene(s2p6,3000);
-	scene++;
+	let mph = parseInt(playerTXT.split(' ')[0])
+	
+	//24 miles per hour
+	
+	if (mph <= 20 && mph > 26){
+		cutscene(s2p6,3000);
+		scene++;
+	}
+	
 } else if(scene == 14) {
-	cutscene(s2p7,3000);
-	scene++;
+	if (playerTXT.toLowerCase() == "mitochondria"){
+		cutscene(s2p7,3000);
+		scene++;
+	}
 } else if(scene == 15) {
-	cutscene(s2p8,3000);
-	scene++;
+	//3,000 miles 5 miles an hour
+	if(parseInt(playerTXT) == 600){
+		cutscene(s2p8,3000);
+		scene++;
+	}
 } else if(scene == 16) {
 	cutscene(s2p9,3000);
 	scene++;

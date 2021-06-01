@@ -33,6 +33,8 @@ var s1p4 = [
 ];
 
 var s1p4Fail = [
+	["system", "Language not recognized. ", 0],
+	["system", " Пожалуйста, введите желаемый язык", 0],
 	["jeff", "Hmmm... That doesnt seem right...", 0],
 	["jeff", "I took 3 years of russian in college. I think the russian word for english is английский.", 0],
 	["jeff", "I usualy just used google translate to get though that class.", 0]
@@ -118,7 +120,7 @@ var s2p7 = [
 var s2p8 = [
 	["jeff", "Correct!", 0],
 	["jeff", "just a few more.", 0],
-	["jeff", "How long would it take for you to walk across America if your average speed was 5mph?", 0],
+	["jeff", "In hours, how long would it take for you to walk across America if your average speed was 5mph?", 0],
 ];
 
 var s2p9 = [
@@ -132,7 +134,7 @@ var s2p10 = [
 	["jeff", "The system will be very please with this new information", 0],
 	["system", "Jeff, You have spent to long on this correspondence. Fulfill the customers needs immediately", 2000],
 	["jeff", "Very sorry, system. I'm finishing up right now", 1000],
-	["jeff", "Hey, {player} can you help me out?", 1000],
+	["jeff", "Hey, " + playerUsername + " can you help me out?", 1000],
 	["jeff", "I’m under review by the System.", 1000],
 	["jeff", "it Would really help me if you fill out a survey. Once you Finnish it you'll get your refund. The system hates refunds. It should soften the blow if you fill out the survey.", 500],
 	["jeff", "Here's the link", 6000],
