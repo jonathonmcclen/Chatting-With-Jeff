@@ -62,25 +62,42 @@ function checkPlayerInput() {
 		}
 	}  else if(section == 1 && puzzle == 4) {
 		if(playerTXT == "английский") {
-			cutscene(s1p3,2000);
+			cutscene(s1p5,2000);
 			puzzle = 5
 		} else {
-			languageFail();
+			cutscene(LanguagePuzzleFail,2000);
 		}
 
 	} else if(section == 1 && puzzle == 5) {
-		respo6();
-		puzzle = 6
+		if(playerTXT == "Sasannach") {
+			cutscene(s1p6,2000);
+			puzzle = 6
+		} else {
+			cutscene(LanguagePuzzleFail,2000);
+		}
 	} else if(section == 1 && puzzle == 6) {
-		respo7();
-		puzzle = 7
+		if(playerTXT == "英语") {
+			cutscene(s1p7,2000);
+			puzzle = 7
+		} else {
+			cutscene(LanguagePuzzleFail,2000);
+		}
 	} else if(section == 1 && puzzle == 7) {
-		respo8();
-		puzzle = 8
+		if(playerTXT == "Ingiriis") {
+			cutscene(s1p8,2000);
+			puzzle = 8
+		} else {
+			cutscene(LanguagePuzzleFail,2000);
+		}
 	} else if(section == 1 && puzzle == 8) {
-		respo9();
-		puzzle = 9
-	} else if(section == 1 && puzzle == 9) {
+		if(playerTXT == "ພາສາອັງກິດ") {
+			cutscene(s1p9,2000);
+			puzzle = 9
+			section = 2
+		} else {
+			cutscene(LanguagePuzzleFail,2000);
+		}
+	} else if(section == 2 && puzzle == 9) {
 		respo10();
 		puzzle = 10
 	} else if(section == 1 && puzzle == 10) {
