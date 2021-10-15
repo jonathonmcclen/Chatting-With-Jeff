@@ -28,10 +28,9 @@ var last_message_elem;
 
 
 //Users
-var playerUsername = "";
 var firstName= "";
 var lastName = "";
-var firstPet
+var firstPet;
 var playerPassword = "";
 var Time = 0;
 
@@ -43,9 +42,9 @@ var playerTXT = "";
 const ENTER = 13;
 var ENTER_DOWN = false;
 
-var worldMap = document.createElement("img");
+var connected;
+var connectedCheck = setInterval(isconected, 5000);
 
-var canvas,canvasContext;
 
 window.onload = function(){
 
@@ -53,19 +52,25 @@ window.onload = function(){
 	document.addEventListener('keyup', keyReleased);
 	
 	//var framerPerSecond = 0.50
-    
     connectingAnimation();
+	
    // addMessageSpace();
 
 };
+
+function isconected(){
+	if (connected == true){
+		cutscene(s1p1, 2000)
+		clearInterval(connectedCheck)
+	} else {
+		return
+	}
+}
 
 function AddMinute(){
 	Time += 1;
 }
 
-function updateGraphics(){
-
-}
 
 function grabSub() {
 	playerTXT = document.getElementById("txt").value;
@@ -73,6 +78,8 @@ function grabSub() {
 
 
 var ms_per_char = 40;
+
+
 
 function addNewLogItem(user, txt, blue=false) {
 	if(user == "player"){
@@ -137,6 +144,8 @@ function addNewLogItem(user, txt, blue=false) {
 
             last_message = "computer";
             last_message_elem = msg;
+			
+			ready_for_input_sound.play();
             
         }, typing_time);
 		
@@ -210,10 +219,9 @@ function keyPressed(evt) {
 			button_beep.play();
 			ENTER_DOWN = true;
 			grabSub();
-			if (section != 3 || puzzle != 6)
-		  		addNewLogItem("player",playerTXT);
-				checkPlayerInput();
-				clearTxtBox();
+		  	addNewLogItem("player",playerTXT);
+			checkPlayerInput();
+			clearTxtBox();
 		}
 	}
 };
