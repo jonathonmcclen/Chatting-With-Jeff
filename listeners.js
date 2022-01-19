@@ -41,10 +41,9 @@ function checkPlayerInput() {
     }
 	
 	if(section == 1 && puzzle == 1) {
-		playerTXT = playerUsername
-		cutscene(s1p2,2000);
+		playerUsername = playerTXT
+		cutscene(s1p2, 2000);
 		puzzle = 2
-		
 	} else if(section == 1 && puzzle == 2) {
 		cutscene(s1p3,2000);
 		playFailSound(400,3);

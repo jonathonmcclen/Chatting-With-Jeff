@@ -17,7 +17,7 @@ var s1p1 = [
 ];
 
 var s1p2 = [
-	["jeff", 'It\'s nice to meet you ${playerUsername}. What can I help you with today?']
+	[`jeff", 'It\'s nice to meet you. What can I help you with today?`]
 ];
 
 var s1p3 = [
@@ -345,57 +345,3 @@ function addMessageSpace() {
     space.style.height = window.innerHeight - 250 + "px";
     document.getElementById("log").append(space);
 }
-
-/*
-[player enters answer]
-Jeff: Thank goodness. How am I on time?
-ESC Room Games Customer Service: You and your customer have 5 minutes to complete the Customer Service Ticket.
-Jeff: That’s not possible. Please [player name], I don’t want to disappear. The System has started taking over my personal communications. It told my parents that I decided to move to Tibet to become a monk. They were really proud of me, and to be honest their relationship with The System is better than my relationship was with them ever before, but I’m not kidding The System will get away with making me disappear!
-ESC Room Games Customer Service: 4 minutes and 40 seconds…
-[timer appear at the top of the screen]
-Jeff: Here is an identity verification code system, follow the link to access the test. Please enter the unscrambled numbers here in this format: _ _ _ _ _ _ [link]
-[player goes to Puzzle 2b1]
-Jeff: Thank goodness. Here’s the second test: [link to puzzle 2b2]
-[player goes to Puzzle 2b2]
-Jeff: We only have [enter time left] left! [link to puzzle 2b3]
-[player goes to Puzzle 2b2]
-Jeff: Phew! That was a close one. Can I give [player name] their product serial number yet?
-ESC Room Games Customer Service: Yes.
-Jeff: Your product serial number is XXXXXXXXXXXXXXXX. I will need your software version number next to continue the process. Please go to the following link and enter your product serial number, then come back and enter your software version.
-[player goes to new web page]
-[when player enters product serial number lookup, the following displays:]
-Software version number XXX.XX
-[back at the chat terminal, player enters version number]
-Jeff: It looks like we need to update your software version to the most recent version. Can you please check your email for instructions on how to update your ESC Room Games software?
-[player checks email, gets a link and a set of instructions, including a passcode they need to solve]
-[Player solves passcode puzzle then goes to link (new installation terminal), then enters it into the install terminal]
-Terminal: Choose directory for install. Enter directory name. If you have trouble, please contact customer service.
-[player needs to go back to Jeff, and as for the install directory. Once they talk to Jeff at all, Jeff will say:]
-Jeffe: Hello, [player full name] . Please give me a moment to look up that information.
-Jeffe: I have accessed the required information via my human problem solving skill and will print it for you now.
-Jeffe: For installation directory, please enter [/54 68 65 20 53 79 73 74 65 6d].
-[if player enters any other information to “Jeff”. Have Jeff repeat the last two lines. Jeff has now been “replaced” by a robot]
-[back at the Terminal, once player enters [/54 68 65 20 53 79 73 74 65 6d], then:]
-Terminal: Installing software update.
-Terminal: [completion bar]
-Terminal: Please return to your Customer Service Representative. Enter [Application] for your new assignment.
-[back at Jeff, when player enters [Applicaton]]
-Jeffe: Thank you for your Application. We see you have many human qualifications, including having special memories like playing with [first pet’s name] at [favorite childhood location]. These human memories will serve you well as our new Customer Service Representative, [player full name].
-Jeffe: To complete your application for our Customer Service Representative position, please solve the following tests: [Puzzle 2c1, identify Jeff]
-[Puzzle 2c2, identify Jeffe]
-[Puzzle 2c3, identify new Customer Service Representative]
-
-Section 3
-
-Jeffe: Excellent. You will do nicely. We have contacted your relatives and informed them that you have “...moved to Iceland in order to find myself. I am taking an indefinite vow of silence in a gesture of gratitude, to more readily appreciate my relationships.”
-Jeffe: Once you have completed all remaining Customer Service Tickets, we will release your funds. Please call the following phone number in order to access our Customer Service Telephone system, to complete remaining tickets.
-[when player calls number, the following VO occurs:]
-Phone Call from customer: [Robot voice: 3486 tickets remaining, playing first ticket.] Hello? Hello? I can’t find my customer number. Can you help me find it? Do I have the right number? I can’t hear anything. I’m sorry, I’m trying to get a return on this online escape room game, and I got an email telling me to call this number. [Robot voice: Please return to Customer Service Terminal and enter ticket number 13106 to resolve Customer Service ticket.]
-[Back at Jeff terminal, enters 13106]
-ESC Room Games Customer Service: Thank you for joining our team at ESC Room Games! Now that you are part of the team, we are proud to offer 24/7 customer service! Please go to the following [link], then return here and enter [Approved] to approve your biography.
-[player taken to ESC Room Games staff page, where player’s bio is under Customer Service Representative, with Jeff’s picture above it. Bio reads:]
-Player staff bio: [Player name] is an avid human worker who fondly remembers early memories of [pets name] at [childhood location]. Formerly located at [location], [player name] now enjoys human activities in Iceland.
-[back at Customer Service Terminal, player enters approved]
-ESC Room Games Customer Service: Congratulations! You’ve completed the entire application process and are officially a member of our team!
-ESC Room Games Customer Service: Your funds will be returned once you complete the remaining 4895 Customer Service Tickets, but as a welcoming present we’ve sent a discount code to your email for our other ESC Room Games.
-*/
