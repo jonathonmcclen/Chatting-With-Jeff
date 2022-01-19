@@ -17,7 +17,7 @@ var s1p1 = [
 ];
 
 var s1p2 = [
-	[`jeff", 'It\'s nice to meet you. What can I help you with today?`]
+	["jeff", "It\'s nice to meet you. What can I help you with today?"]
 ];
 
 var s1p3 = [
@@ -152,7 +152,7 @@ function cutscene(scene, speed){
 	console.log(length);
 	
 	for (let i = 0; i < length; i++) {
-		console.log('ran');
+		//console.log('ran');
 		console.log(scene[i][0]);
 		console.log(scene[i][1]);
 		
@@ -160,7 +160,7 @@ function cutscene(scene, speed){
 			addNewLogItem(scene[i][0], scene[i][1]);
 		};
 		
-		setTimeout(line, speed*i);
+		setTimeout(line(), speed*i);
 		
 	}
 	Ready_For_Input();

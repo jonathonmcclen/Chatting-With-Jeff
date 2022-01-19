@@ -71,14 +71,11 @@ function AddMinute(){
 	Time += 1;
 }
 
-
 function grabSub() {
 	playerTXT = document.getElementById("txt").value;
 };
 
-
 var ms_per_char = 40;
-
 
 
 function addNewLogItem(user, txt, blue=false) {
@@ -175,32 +172,7 @@ function addNewLogItem(user, txt, blue=false) {
         last_message = null;
         last_message_elem = null;
 		
-	} else if(user == "important") {
-		
-		var btn = document.createElement("h2");
-        btn.className = "log-item";
-		btn.innerHTML = txt;
-		btn.className = "important";
-		document.getElementById("log").appendChild(btn);	
-		window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
-        
-        last_message = null;
-        last_message_elem = null;
-		
-	} else if(user == "End") {
-		
-		var btn = document.createElement("h2");
-        btn.className = "log-item";
-		btn.innerHTML = "C:\\User\\Input> " + txt;
-		btn.className = "End";
-		document.getElementById("log").appendChild(btn);	
-		window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
-        
-        last_message = null;
-        last_message_elem = null;
 	}
-    if (blue)
-        btn.style.color = '#3B7ECF';
 };
 
 function clearTxtBox(){
@@ -209,9 +181,7 @@ function clearTxtBox(){
 
 //  PLAYER PRESSED ENTER
 function keyPressed(evt) {
-	
 	//console.log(evt.keyCode);
-
 	if(inputAllowed){
 		if(evt.keyCode == ENTER) {
 			let button_beep = document.createElement('audio');
