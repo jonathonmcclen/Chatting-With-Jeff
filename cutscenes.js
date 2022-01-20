@@ -6,162 +6,192 @@ var failure_sound = document.createElement('audio');
 failure_sound.src = 'https://cia-9d562a98.s3.us-west-1.amazonaws.com/GameAssets/SoundFX/Daffodil362Failure.wav';
 
 var typing_animation
+var playerUsername = "";
 
+// GAME START
+//BEGIN CHATTING WITH JEFF
 
-//-------------------------------------------------
+function connectingAnimation() {
+    document.getElementById('header').innerHTML = "Connecting..."
+
+    setTimeout(function() {
+        document.getElementById('header').innerHTML = "Connected!"
+    }, 2000);
+    setTimeout(function() {
+        document.getElementById('header').innerHTML = "You Are Now Speaking with Jeff"
+    }, 3000);
+	connected = true;
+
+}
+
+function addMessageSpace() {
+    var space = document.createElement('div');
+    space.style.height = window.innerHeight - 250 + "px";
+    document.getElementById("log").append(space);
+}
+
 	
 //SECTION 1
 
 var s1p1 = [
-	["jeff", "Hello, I am Jeff. Who do I have the pleasure of speaking with today?"]
+	["jeff", "Hello, I am Jeff. Who do I have the pleasure of speaking with today?", 0 ]
 ];
 
 var s1p2 = [
-	["jeff", "It\'s nice to meet you. What can I help you with today?"]
+	["jeff", "It\'s nice to meet you. What can I help you with today?", 0]
 ];
 
 var s1p3 = [
-	["system", "Language not recognized. Would you like to continue in Russian? Enter да or No."],
-	["jeff", " I’m sorry there seems to be a problem with our language recognition. Would you mind entering ‘No’ please? I can’t address this from my end."]
+	["system", "Language not recognized. Would you like to continue in Russian? Enter да or No.", 0],
+	["jeff", " I’m sorry there seems to be a problem with our language recognition. Would you mind entering ‘No’ please? I can’t address this from my end.", 0]
 ];
 
 var s1p4 = [
-	["system", "Language not recognized. "],
-	["system", " Пожалуйста, введите желаемый язык"],
-	["jeff", " UH OH... She's angry"],
-	["jeff", "I apologize for the inconvenience. Can you please enter the Russian word for English? That seems to be the only way the system will respond..."]
+	["system", "Language not recognized. ", 0],
+	["system", " Пожалуйста, введите желаемый язык", 0],
+	["jeff", " UH OH...I think that made it worse", 0],
+	["jeff", "I apologize for the inconvenience. Can you please enter the Russian word for English? That seems to be the only way the system will respond...", 0]
+];
+
+var s1p4Fail = [
+	["system", "Language not recognized. ", 0],
+	["system", " Пожалуйста, введите желаемый язык", 0],
+	["jeff", "Hmmm... That doesnt seem right...", 0],
+	["jeff", "I took 3 years of russian in college. I think the russian word for english is английский.", 0],
+	["jeff", "I usualy just used google translate to get though that class.", 0]
 ];
 
 //Answer: английский
 
 var s1p5 = [
-	["jeff", "Hmmm... That did something... One moment. lemme see if i can fix this..."],
-	["system", "Cuir a-steach an cànan a tha thu ag iarraidh"],
-	["jeff", "Guess not..."],
-	["jeff", "I Have no idea what that says"]
+	["system", "Am bu mhath leat leantainn air adhart sa chànan seo?", 0],
+	["jeff", "Hmmm... That did something...", 0],
+	["jeff", "But i have no idea what that says.", 0]
 ];
 
 //Answer: Sasannach
+// NEW ANSWER: Chan eil
 
 var s1p6 = [
-	["system", "请输入您想要的语言"],
-	["jeff", "Looks like we might be getting somewhere!"],
-	["jeff", "Keep Going"],
-	["jeff", "I think its working"]
+	["system", "这种语言怎么样?", 0],
+	["jeff", "Looks like we might be getting somewhere!", 0],
+	["jeff", "Keep Going", 0]
 ];
 
 //Answer:  英语
+//NEW ANSWER: 不
 
 var s1p7 = [
-	["system", "Fadlan qor luqaddaada"],
-	["jeff", "Looks like we might be getting somewhere!"],
-	["jeff", "Its working!"],
-	["jeff", "Keep going"],
+	["system", "Markaas luqadee rabtaa?!", 0],
+	["jeff", "Its working!", 0],
+	["jeff", "Try to do that one now.", 0]
 ];
 
 //Answer: Ingiriis
 
 var s1p8 = [
-	["system", "ຂ້ອຍບໍ່ເຂົ້າໃຈ. ກະລຸນາຂຽນພາສາທີ່ທ່ານເວົ້າຕາມປະເພນີ"],
-	["system", "Looks like we might be getting somewhere!"],
+	["system", "ຂ້ອຍບໍ່ເຂົ້າໃຈ. ກະລຸນາພິມພາສາທີ່ທ່ານຕ້ອງການເປັນພາສາອາຣັບ", 0],
+	["jeff", "Looks like we might be getting somewhere!", 0],
 ];
 
 //Answer: ພາສາອັງກິດ
+//NEW ANSWER: الإنجليزية
 
 
 //SECTION 2
 
 var s2p1 = [
-	["system", "Esc Room Games customer AI Program reset"],
-	["jeff", "Hello, I'm jeff. What can I help you with today?"],
+	["system", "Esc Room Games customer AI Program reset", 0],
+	["jeff", "Hello, I'm jeff. What can I help you with today?", 0],
 ];
 
-var s2p1 = [
-	["jeff", "I can certainly help you with that."],
-	["jeff", "I'll just need to verify your identity. Please enter your first and last name."]
-];
-
-var s2p3 = [
-	["jeff", "Fantastic. its a pleasure to meet you {player} We have a few more questions for you. First, can you tell me what the name of your first pet was?"],
+var s2p2 = [
+	["jeff", "I can certainly help you with that.", 0],
+	["jeff", "I'll just need to verify your identity. Please enter your first and last name.", 0]
 ];
 
 var s2p3 = [
-	["jeff", "Adorable."],
-	["jeff", "Next, What is your mothers maiden name?"]
+	["jeff", "Fantastic. its a pleasure to meet you. We have a few more questions for you. First, can you tell me what the name of your first pet was?", 0],
 ];
 
 var s2p4 = [
-	["jeff", "Beautiful... isn't that Russian?"],
-	["jeff", "Next, what city are you located?"]
+	["jeff", "Adorable.", 0],
+	["jeff", "Next, What is your mothers maiden name?", 0]
 ];
 
 var s2p5 = [
-	["jeff", "Thank you. Just a few more questions."],
-	["jeff", "What is the airspeed velocity of an Unladen Swallow?"]
+	["jeff", "Beautiful... isn't that Russian?", 0],
+	["jeff", "Next, what city are you located?", 0]
 ];
 
 var s2p6 = [
-	["jeff", "hmm..."],
-	["jeff", "That’s not what I have here..."],
-	["jeff", "but I understand there are variations between species."],
-	["jeff", "Next Question. What is the power house of the cell?"]
-];
-
-var s2p6 = [
-	["jeff", "Correct!"],
-	["jeff", "just a few more."]
-	["jeff", "How long would it take for you to walk across America if your average speed was 5mph?"],
-];
-
-var s2p6 = [
-	["jeff", "Very good!"],
-	["jeff", "Last but certainly not least…"]
-	["jeff", "What is the purpose of a merry go round?"],
+	["jeff", "Thank you. Just a few more questions.", 0],
+	["jeff", "What is the airspeed velocity, in miles per hour, of an Unladen Swallow?", 0]
 ];
 
 var s2p7 = [
-	["jeff", "Fascinating"],
-	["jeff", "The system will be very please with this new information"],
-	["system", "Jeff, You have spent to long on this correspondence. Fulfill the customers needs immediately"],
-	["jeff", "Very sorry, system. I'm finishing up right now"],
-	["jeff", "Hey, {player} can you help me out?"],
-	["jeff", "I’m under review by the System."],
-	["jeff", "it Would really help me if you fill out a survey. Once you Finnish it you'll get your refund. The system hates refunds. It should soften the blow if you fill out the survey."],
-	["jeff", "Here's the link"],
-	["system", "Aren't you forgetting something Jeff?"],
-	["jeff", "Oh Yeah"],
-	["jeff", "Thank you for choosing esc room games. The leader in escape room game technology."],
-	["system", "And…"],
-	["jeff", "We hope that in the future you will look to esc room games for all your escape room needs"],
-	["system", "Jeff!"],
-	["jeff", "If you wish to cancel your refund please click this link instead"],
-	["jeff", "Link"],
-	["system", "Good"],
-	["system", "Thank you user. We hope you will reconsider getting a refund… for Jeff's sake…"],
-	["system", "Have a nice day"],
+	["jeff", "hmm..."],
+	["jeff", "That’s not what I have here...", 0],
+	["jeff", "but I understand there are variations between species.", 0],
+	["jeff", "Next Question. What is the power house of the cell?", 0]
+];
+
+var s2p8 = [
+	["jeff", "Correct!", 0],
+	["jeff", "just a few more.", 0],
+	["jeff", "In hours, how long would it take for you to walk across America if your average speed was 5mph?", 0],
+];
+
+var s2p9 = [
+	["jeff", "Very good!", 0],
+	["jeff", "Last but certainly not least…", 0],
+	["jeff", "What exactly is the purpose of a rubber duck?", 0],
+];
+
+var s2p10 = [
+	["jeff", "Fascinating", 0],
+	["jeff", "The system will be very please with this new information.", 0],
+	["system", "Jeff, You have spent too long on this correspondence. Fulfill the customers needs immediately", 2000],
+	["jeff", "Very sorry, system. I'm finishing up right now", 1000],
+	["jeff", "Hey, " + playerUsername + " can you help me out?", 1000],
+	["jeff", "I’m under review by the System.", 1000],
+	["jeff", "it Would really help me if you fill out a survey. Once you Finnish it you'll get your refund. The system hates refunds. It should soften the blow if you fill out the survey.", 500],
+	["jeff", `Here's the link: <a target="_blank" href="https://escroomgames.com/Games/I-Want-My-Money-Back/Review">Review Link</a>`, 6000],
+	["system", "Aren't you forgetting something Jeff?", 10000],
+	["jeff", "Oh Yeah", 9000],
+	["jeff", "Thank you for choosing esc room games. The leader in escape room game technology.", 8000],
+	["system", "And…", 11000],
+	["jeff", "We hope that in the future you will look to esc room games for all your escape room needs", 9000],
+	["system", "Jeff!", 12500],
+	["jeff", "If you wish to cancel your refund please click this link instead", 11000],
+	["jeff", `<a target="_blank" href="https://escroomgames.com/Games/I-Want-My-Money-Back/you-will-be-redirected-shortly">Cancel Refund Link<a>`, 11000],
+	["system", "Good", 14000],
+	["system", "Thank you user. We hope you will reconsider getting a refund… for Jeff's sake…", 13000],
+	["system", "You have been disconected from the chat.", 15000]
 ];
 
 var LanguagePuzzleFail = [
 	["jeff", "The system doesn't seem to know what you're trying to say. maybe try google translate or something? I don't know."]
 ];
 
-
 function cutscene(scene, speed){
 	inputAllowed = false;
 	var length = scene.length
-	console.log(length);
-	
+	//console.log(length);
+
 	for (let i = 0; i < length; i++) {
+		//Ready for next line false
 		//console.log('ran');
-		console.log(scene[i][0]);
-		console.log(scene[i][1]);
-		
+		//console.log(scene[i][0]);
+		//console.log(scene[i][1]);
+
 		function line(){
 			addNewLogItem(scene[i][0], scene[i][1]);
+			// ready for next line = true
 		};
-		
-		setTimeout(line(), speed*i);
-		
+
+		setTimeout(line, (speed*i)+scene[i][2]);
+
 	}
 	Ready_For_Input();
 }
@@ -326,22 +356,3 @@ function playFailSound(ms_between, num_plays) {
     }
 }
 
-//BEGIN CHATTING WITH JEFF ADDITIONS
-
-function connectingAnimation() {
-    document.getElementById('header').innerHTML = "Connecting..."
-
-    setTimeout(function() {
-        document.getElementById('header').innerHTML = "Connected!"
-    }, 2000);
-    setTimeout(function() {
-        document.getElementById('header').innerHTML = "You Are Now Speaking with Jeff"
-    }, 3000);
-	setTimeout(cutscene(s1p1, 2000), 5000);
-}
-
-function addMessageSpace() {
-    var space = document.createElement('div');
-    space.style.height = window.innerHeight - 250 + "px";
-    document.getElementById("log").append(space);
-}

@@ -21,11 +21,9 @@ var current_music = main_music;
 
 var inputAllowed = true;
 
-
 //Style
 var last_message;
 var last_message_elem;
-
 
 //Users
 var firstName= "";
